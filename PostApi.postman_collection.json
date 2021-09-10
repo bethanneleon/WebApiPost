@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "48a90b08-3af8-4f00-9e59-448e6808e371",
+		"name": "PostApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"public1\",\r\n\"password\":\"public1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/Post/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"Post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"writer1\",\r\n    \"password\":\"writer1\",\r\n    \"IdPost\":null,\r\n    \"Title\": \"Prueba 6\",\r\n    \"TextContent\": \"A la vuelta del amor nube eterna entre altas rocas, cita eterna tarde rota vuelvo sola como mi corazon...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/Post/AddPost/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"Post",
+						"AddPost",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"writer1\",\r\n    \"password\":\"writer1\",\r\n    \"IdPost\":5,\r\n    \"Title\": \"Prueba 5\",\r\n    \"TextContent\": \"Aunque la virgen sea blancao pintame angelitos negros...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/Post/EditPost/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"Post",
+						"EditPost",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"writer1\",\r\n    \"password\":\"writer1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/Post/SubmitPost/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"Post",
+						"SubmitPost",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"editor1\",\r\n    \"password\":\"editor1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/Post/ApprovePost/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"Post",
+						"ApprovePost",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"editor1\",\r\n    \"password\":\"editor1\",\r\n    \"IdPost\":5,\r\n    \"TextComment\":\"Rechazado por mala incompleto.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/Post/RejectPost/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"Post",
+						"RejectPost",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add PostComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"public1\",\r\n    \"password\":\"public1\",\r\n    \"IdPost\":5,\r\n    \"TextComment\":\"Prueba comentario Role Public\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44389/api/PostComment/AddPostComment",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44389",
+					"path": [
+						"api",
+						"PostComment",
+						"AddPostComment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
